@@ -46,6 +46,12 @@ try:
             print("NAMES:", link.get_text())
             print("TITLES:",link.get('title'))
             print("IMAGES:",imgs.get('src'))
+           
+        
+    finds = soup.find('tbody', class_ = 'lister-list').find_all('tr')
+    print(len(finds))
+    for fetch in finds:
+        print(fetch)
 
     # here i just fetch images
     # images=[]
