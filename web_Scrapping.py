@@ -42,10 +42,11 @@ try:
 
     # HERE I FETCH NAME, TITLES AND IMAGES
     for link in soup.find('tbody').select('td.titleColumn a'):
-        for imgs in soup.select('td.posterColumn img'):
-            print("NAMES:", link.get_text())
-            print("TITLES:",link.get('title'))
-            print("IMAGES:",imgs.get('src'))
+        print("NAMES:", link.get_text())
+        print("TITLES:",link.get('title'))
+
+    for imgs in soup.select('td.posterColumn img'):
+        print("IMAGES:",imgs.get('src'))
            
         
     finds = soup.find('tbody', class_ = 'lister-list').find_all('tr')
